@@ -1,3 +1,5 @@
+set visualbell
+syntax on
 
 " vim settings
 set hlsearch
