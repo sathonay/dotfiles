@@ -1,7 +1,6 @@
-set visualbell
-syntax on
-
 " vim settings
+syntax on
+set visualbell
 set hlsearch
 set number
 set relativenumber
