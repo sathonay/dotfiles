@@ -10,7 +10,7 @@ set relativenumber
 
 " todo maybe replace cr by esc
 " nnoremap <silent> <CR> :noh<CR><CR>
-" nnoremap <silent> <esc> :noh<CR><CR>
+nnoremap <silent> <esc> :noh<CR><CR>
 
 " vim plugins
 runtime ftplugin/man.vim
