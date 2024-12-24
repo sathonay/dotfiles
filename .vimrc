@@ -8,8 +8,9 @@ set relativenumber
 " vim keybinds
 
 " todo maybe replace cr by esc
-" nnoremap <silent> <CR> :noh<CR><CR>
-nnoremap <silent> <esc> :noh<CR><CR>
+nnoremap <silent> <CR> :noh<CR><CR>
+" currently broken on ubuntu
+" nnoremap <silent> <esc> :noh<CR><CR>
 
 " Explorer conf
 " let g:netrw_liststyle = 4
