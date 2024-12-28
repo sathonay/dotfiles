@@ -4,6 +4,7 @@ set novisualbell
 set hlsearch
 set number
 set relativenumber
+colorscheme torte
 
 " vim keybinds
 
