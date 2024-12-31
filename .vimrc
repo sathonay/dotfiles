@@ -1,6 +1,6 @@
 " vim settings
 syntax on
-set novisualbell
+set belloff=all
 set hlsearch
 set number
 set relativenumber

@@ -1,4 +1,4 @@
-export DOTFILES="~/.files"
+export DOTFILES="$HOME/.files"
 
 export MYVIMRC="$DOTFILES/.vimrc"
 export VIMINIT=":set runtimepath+=$DOTFILES/.vim/**|:source $MYVIMRC"
