@@ -1,4 +1,6 @@
 .git
 ignore-list
-install.sh
+dfm
 README.md
+fastfetch_conf
+fastfetch
