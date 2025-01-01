@@ -1,6 +1,6 @@
 .git
-ignore-list
 dfm
+dfm_ignore
 README.md
-fastfetch_conf
 fastfetch
+fastfetch_conf
