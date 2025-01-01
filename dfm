@@ -2,7 +2,7 @@
 # dfm dot files manager
 
 dest="$HOME/"
-dir="$(dirname $0)/"
+dir="$(realpath .)/$(dirname $0)/"
 self=$(basename "$0")
 ignore="dfm_ignore"
 files="$(ls -A $dir | grep -Ewv "$(cat $dir$ignore | tr '\n' '|')$ignore|$self")"
@@ -30,13 +30,17 @@ install()
 	git submodule update --init	
 	echo "Soft linking: "
 	for file in $files; do
-		if [ ! -f *dest$file ] && [ -e $dest$file ]; then
-			cp -R $dest$file $dest$file.post_dfm
+		echo $file
+		if [ ! -f $dest$file ] && [ -e $dest$file ]; then
+			cp -R $dest$file $dest$file.prior_dfm
 			rm -fr $dest$file
+			echo "	found $file in install destination, a $file.prior_dfm"
 			#todo message to show mv  file and if the mv failed
 		fi
-		echo "linking $file"
-		ln -s $dir$file $dest$file 
+		if [ ! -e $dest$file ]; then
+			echo "	linking $dest$file -> $dir$file"
+			ln -s $dir$file $dest$file 
+		fi
 	done
 	exit
 }
@@ -45,13 +49,16 @@ uninstall()
 {
 	echo "uninstalling..."
 	for file in $files; do
+		echo $file
 		if [ -L $dest$file ]; then
 			rm $dest$file
+			echo "	removed link for $file"
 			#todo message to show remove file and if the remove failed
 		fi
-		if [ -e $dest$file.post_dfm ]; then
-			cp -R $dest$file.post_dfm $dest$file
-			rm -fr $dest$file.post_dfm
+		if [ -e $dest$file.prior_dfm ]; then
+			cp -R $dest$file.prior_dfm $dest$file
+			rm -fr $dest$file.prior_dfm
+			echo "	found $file.prior_dfm and rollbacked to it"
 			#todo message to show mv  file and if the mv failed
 		fi
 	done
