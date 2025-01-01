@@ -27,8 +27,8 @@ list()
 
 install()
 {
-	git -C $dir submodule update --init	
 	echo "Soft linking: "
+	git -C $dir submodule update --init	
 	for file in $files; do
 		echo $file
 		if [ ! -L $dest$file ] && [ -f $dest$file ]; then
@@ -48,6 +48,7 @@ install()
 uninstall()
 {
 	echo "uninstalling..."
+	git -C $dir submodule deinit --all	
 	for file in $files; do
 		echo $file
 		if [ -L $dest$file ]; then
