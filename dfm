@@ -2,20 +2,21 @@
 # dfm dot files manager
 
 dest="$HOME/"
-dir="$(pwd)/"
+dir="$(dirname $0)/"
 self=$(basename "$0")
 ignore="dfm_ignore"
-files="$(ls -A | grep -Ewv "$(cat $ignore | tr '\n' '|')$ignore|$self")"
+files="$(ls -A $dir | grep -Ewv "$(cat $dir$ignore | tr '\n' '|')$ignore|$self")"
+functions="$(cat $0 | grep -E "\(\)$" | sed "s/()//g")"
 
-function list
+list()
 {
 	echo "Files: "
 	for file in $files; do
 		printf "	"
-		if [ -f $file ]; then
+		if [ -f $dir$file ]; then
 			printf "📜"
 		fi
-		if [ -d $file ]; then
+		if [ -d $dir$file ]; then
 			printf "📂"
 		fi
 		printf " $file\n"
@@ -24,7 +25,7 @@ function list
 	exit
 }
 
-function install
+install()
 {
 	
 	echo "Soft linking: "
@@ -40,7 +41,7 @@ function install
 	exit
 }
 
-function uninstall
+uninstall()
 {
 	echo "uninstalling..."
 	for file in $files; do
@@ -59,3 +60,5 @@ function uninstall
 
 command="$1"
 ${command}
+echo "$functions" 
+
