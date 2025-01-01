@@ -27,7 +27,7 @@ list()
 
 install()
 {
-	
+	git submodule update --init	
 	echo "Soft linking: "
 	for file in $files; do
 		if [ ! -f *dest$file ] && [ -e $dest$file ]; then
