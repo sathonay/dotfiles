@@ -3,7 +3,8 @@
 
 dest="$HOME/"
 dir="$(pwd)/"
-files="$(find . -maxdepth 1 \! -type l | tail -n +2 | grep -Ewv "$(cat ignore-list)")"
+#files="$(find . -maxdepth 1 \! -type l | tail -n +2 | grep -Ewv "$(cat ignore-list)")"
+files="$(ls -A | grep -Ewv "$(cat ignore-list | tr '\n' '|' | sed 's|.$||g')")"
 
 function list
 {
