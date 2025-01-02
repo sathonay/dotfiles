@@ -27,8 +27,10 @@ list()
 
 install()
 {
-	echo "Soft linking: "
+	echo "Init submodule: "
 	git -C $dir submodule update --init	
+	"$dir"install
+	echo "Soft linking: "
 	for file in $files; do
 		echo $file
 		if [ ! -L $dest$file ] && [ -e $dest$file ]; then
