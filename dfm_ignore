@@ -1,5 +1,4 @@
 .git
 .gitmodules
+install
 README.md
-fastfetch
-fastfetch_conf
