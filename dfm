@@ -34,7 +34,7 @@ install()
 		if [ ! -L $dest$file ] && [ -e $dest$file ]; then
 			cp -R $dest$file $dest$file.prior_dfm
 			rm -fr $dest$file
-			echo "	found $file in install destination, a $file.prior_dfm"
+			echo "	found $file in install destination, a $file.prior_dfm was create"
 			#todo message to show mv  file and if the mv failed
 		fi
 		if [ ! -e $dest$file ]; then
