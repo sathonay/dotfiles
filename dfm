@@ -2,9 +2,10 @@
 # dfm dot files manager
 
 dest="$HOME/"
-dir="$(realpath .)/$(dirname $0)/"
+dir="$(pwd)/$(dirname $0)/"
 self=$(basename "$0")
 ignore="dfm_ignore"
+echo $dir
 files="$(ls -A $dir | grep -Ewv "$(cat $dir$ignore | tr '\n' '|')$ignore|$self")"
 functions="$(cat $0 | grep -E "\(\)$" | sed "s/()//g")"
 
