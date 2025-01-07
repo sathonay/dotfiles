@@ -12,4 +12,4 @@
 	url = https://github.com/preservim/nerdtree
 [submodule ".vim/pack/plugins/start/vim-devicons"]
 	path = .vim/pack/plugins/start/vim-devicons
-	url = https://github.com/yanoasis/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
