@@ -1,10 +1,10 @@
-" vim settings
-syntax on
-set belloff=all
-set hlsearch
-set number
-set relativenumber
-colorscheme torte
+	" vim settings
+	syntax on
+	set belloff=all
+	set hlsearch
+	set number
+	set relativenumber
+	" colorscheme torte
 
 " vim keybinds
 
@@ -21,11 +21,13 @@ let g:netrw_bufsettings = 'number relativenumber noma nomod nowrap ro nobl'
 
 " finding files
 set path+=**
-" nnoremap <C-p> :find
 
 " vim plugins
 runtime ftplugin/man.vim
 
+" select de previous buffer after moving txt
+vnoremap > >gv
+vnoremap < <gv
 " no arrow keys :'/
 noremap <Up> <nop>
 noremap <Down> <nop>
