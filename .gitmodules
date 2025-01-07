@@ -7,3 +7,9 @@
 [submodule "fastfetch"]
 	path = fastfetch
 	url = https://github.com/fastfetch-cli/fastfetch
+[submodule ".vim/pack/plugins/start/nerdtree"]
+	path = .vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule ".vim/pack/plugins/start/vim-devicons"]
+	path = .vim/pack/plugins/start/vim-devicons
+	url = https://github.com/yanoasis/vim-devicons
