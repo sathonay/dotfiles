@@ -20,6 +20,7 @@ set listchars=eol:⤸,tab:➜⠀,space:●
 set clipboard=unnamed,unnamedplus
 
 " colorscheme torte
+colorscheme sorbet
 
 " 42 header
 let g:user42="alrey"
