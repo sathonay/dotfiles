@@ -1,11 +1,21 @@
-	" vim settings
-	syntax on
-	set belloff=all
-	set hlsearch
-	set number
-	set relativenumber
-	" colorscheme torte
+" vim settings
+syntax on
+set belloff=all
+set hlsearch
+set number
+set relativenumber
+set colorcolumn=81
 
+set autoindent
+set smartindent
+set shiftwidth=0
+set tabstop=4
+set noexpandtab
+" colorscheme torte
+
+" 42 header
+let g:user42="alrey"
+let g:mail42="alrey@student.42nice.fr"
 " vim keybinds
 
 " todo maybe replace cr by esc

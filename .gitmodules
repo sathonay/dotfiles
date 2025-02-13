@@ -13,3 +13,6 @@
 [submodule ".vim/pack/plugins/start/vim-devicons"]
 	path = .vim/pack/plugins/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons
+[submodule ".vim/pack/plugins/start/42header"]
+	path = .vim/pack/plugins/start/42header
+	url = https://github.com/42Paris/42header
