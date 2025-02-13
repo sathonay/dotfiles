@@ -11,6 +11,14 @@ set smartindent
 set shiftwidth=0
 set tabstop=4
 set noexpandtab
+
+" show spaces and tabs
+nnoremap <space>s :set list<CR>
+nnoremap <space>h :set nolist<CR>
+set listchars=eol:⤸,tab:➠⠀,space:●
+
+set clipboard=unnamed,unnamedplus
+
 " colorscheme torte
 
 " 42 header
