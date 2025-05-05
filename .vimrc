@@ -5,9 +5,8 @@ set hlsearch
 set number
 set relativenumber
 set colorcolumn=81
-
-set autoindent
-set smartindent
+" set autoindent
+" set smartindent
 set shiftwidth=0
 set tabstop=4
 set noexpandtab
@@ -40,7 +39,7 @@ let g:netrw_bufsettings = 'number relativenumber noma nomod nowrap ro nobl'
 
 " finding files
 set path+=**
-
+set path+=/usr/include,/usr/local/include,inc,
 " vim plugins
 runtime ftplugin/man.vim
 

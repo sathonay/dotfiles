@@ -1,4 +1,4 @@
-
+unsetopt BEEP
 #export MYVIMRC="/.vimrc"
 #export VIMINIT=":set runtimepath+=$DOTFILES/.vim/**|:source $MYVIMRC"
 
@@ -12,4 +12,4 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 # Created by `pipx` on 2025-02-13 02:43:20
-export PATH="$PATH:/home/alks/.local/bin"
+export PATH="$PATH:/home/alks/.local/bin:/home/linuxbrew/.linuxbrew/bin"
